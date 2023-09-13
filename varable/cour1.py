@@ -2,11 +2,11 @@ import random
 
 def somme(n1, n2):
     r = n1 + n2
-    
     return str(n1) + "+"+ str(n2) + "=" + str(r) 
 
 def rollDes(tail):
     print(random.randint(1,tail))
+    
 def des():
     a = True  
     while a:
@@ -74,7 +74,7 @@ def Alumette():
             print("Combien d'allumettes prennez-vous ? 1/2/3")
             pt = int(input())
             
-            if pt > 0 & pt < 3:
+            if pt > 0 and pt < 3:
                 print("Vous avez pris " + str(pt) + "alumette(s).")
                 nAl -= pt
                 choix = False
@@ -87,7 +87,7 @@ def Alumette():
         iat = random.randint(1, 3)
         choix = True
         while choix:
-            if iat > 1 & nAl - iat <= 0:
+            if iat > 1 and nAl - iat <= 0:
                 iat -= 1
             else:
                 nAl -= iat
@@ -104,6 +104,7 @@ def ChoixFonction():
     print("3) Alumette")
     
     c = int(input())
+    z = 24
     
     if c == 1:
         TableMult()
@@ -113,9 +114,3 @@ def ChoixFonction():
         Alumette()
 
 ChoixFonction()
-            
-            
-            
-            
-    
-    
