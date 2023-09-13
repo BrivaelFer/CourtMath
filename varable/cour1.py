@@ -96,7 +96,23 @@ def Alumette():
         print("Votre adversaire tire " + str(iat) + " alumette(s).")
         if nAl <= 0: print("Gagner !")
 
-Alumette()
+def ChoixFonction():
+    
+    print("Selectionner jeu:")
+    print("1) Table multipliquation")
+    print("2) Grand petit")
+    print("3) Alumette")
+    
+    c = int(input())
+    
+    if c == 1:
+        TableMult()
+    elif c == 2:
+        TropGP()
+    elif c == 3:
+        Alumette()
+
+ChoixFonction()
             
             
             
