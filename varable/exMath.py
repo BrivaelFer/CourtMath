@@ -28,10 +28,9 @@ def HexaCovertiseur(nExa):
 def DeciToHexa(nomberD):
     resulte = ""
     hexa = "0123456789abcdef"
-    reste = nomberD
     while nomberD > 16:
+        reste = nomberD % 16
         nomberD = nomberD // 16
-        reste %= 16
         resulte = hexa[reste] + resulte
     
     return hexa[nomberD] + resulte
