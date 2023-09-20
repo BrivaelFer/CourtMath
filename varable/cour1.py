@@ -94,6 +94,11 @@ def Alumette():
                 choix = False
                 
         print("Votre adversaire tire " + str(iat) + " alumette(s).")
+        
+        # mC = (nAl - 1) % 4
+        # if mC == 0:
+        #     mC = random.randint(1, min(3, nAl))
+            
         if nAl <= 0: print("Gagner !")
 
 def ChoixFonction():

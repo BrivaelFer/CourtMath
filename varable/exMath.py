@@ -23,8 +23,6 @@ def HexaCovertiseur(nExa):
         count -= 1
     return resulte
 
-#print(HexaCovertiseur(input("Entre un nombre hexadecimal : ")))
-
 def DeciToHexa(nomberD):
     resulte = ""
     hexa = "0123456789abcdef"
@@ -35,6 +33,30 @@ def DeciToHexa(nomberD):
     
     return hexa[nomberD] + resulte
 
-print(DeciToHexa(3015))
-          
+def DeciToBi(num):
+    resulte = ""
+    bi = "01"
+    while num > 0:
+        resulte = bi[num % 2] + resulte
+        num = num // 2
     
+    return resulte
+
+def BiToDeci(numB):
+    resulte = 0
+    
+    count = len(numB) - 1
+    for bi in numB:
+        if bi in ["0", "1"]:
+            if bi == "1":
+                resulte += 2 ** count
+        else:
+            return "Entre invalide"   
+        count -= 1
+    return resulte
+
+def BiToHexa(numB):
+    return DeciToHexa(BiToDeci(numB))
+
+def HexaToBi(numH):
+    return DeciToBi(HexaCovertiseur(numH))  
