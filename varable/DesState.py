@@ -30,7 +30,7 @@ def PourCent(tirage):
     for i, t in enumerate(tirage):
         prc = (t / ntl) * 100
         print("Le resulta " + str(i + 1) + " est sorti sur " 
-              + str(prc) + "%" + " des lancer soit " + str(t) + " fois")
+              + str(prc) + "% des lancer soit " + str(t) + " fois")
 
 #Grah(Tirage(8, 20))
 
