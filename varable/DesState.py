@@ -33,5 +33,35 @@ def PourCent(tirage):
               + str(prc) + "% des lancer soit " + str(t) + " fois")
 
 #Grah(Tirage(8, 20))
+def TirageJeu(tail):
+    r = [0]*tail
+    
+    c = 0
+    while HaveZero(r):
+        r[random.randint(1,tail)-1] += 1
+        c += 1
+    return r
 
+def HaveZero(t):
+    for i in t:
+        if i == 0:
+            return True
+    return False
+
+def Play():
+    j = ["j1", "j2"]
+    print("\t|1|2|3|4|5|6|total")
+    print("\t---------------------")
+    for p in j:
+        jt = TirageJeu(6)
+        tjt = sum(jt)
+        r = p +"\t"
+        for f in jt:
+            r += "|" + str(f)
+        r += "|"+ str(sum(jt))
+        print(r)
+            
+        
+        
 PourCent(Tirage(6, 800))
+Play()
