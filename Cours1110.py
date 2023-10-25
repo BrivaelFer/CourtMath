@@ -8,18 +8,28 @@ def ListNP(max = 100):
         n += 1
     return res
 
-# def Strat2(max = 100):
-#     res = []
-#     i = 2
-#     while i <= max:
-#         res += [i]
-#         i += 1
-#     i = 2
-#     s = len(res)
-#     while i <= s:
-#         j = len()
-#         while i * <= max
+def Strat2(max = 100):
+    res =[True] * (max + 1)
+    res[0] = False
+    res[1] = False
+    for i in range(2, max + 1):
+        for j in range(i):
+            if res[j]:
+                if i % j == 0:
+                    res[i] = False
+    return res
+
+def Strat3(max = 100):
+    res =[True] * (max + 1)
+    res[0] = False
+    res[1] = False
+    for i,v in enumerate(res):
+        if v:
+            for j in range( i * 2, max + 1, i):
+                res[j] = False
         
+    return res  
+     
 def IsPremier(n):
     i = n - n // 2
     while i > 1:
@@ -39,13 +49,21 @@ def IsPremier(n, lp):
 def ShowList(l):
     r =""
     for i, n in enumerate(l):
-        if i % 12 == 0:
-            r += "\n"
-        
         if i == 0:
             r += str(n)
         else:
             r += ", "+ str(n)
+            
+        if i % 12 == 0:
+            r += "\n"
     print(r)
 
-ShowList(ListNP(200000))
+def ShowList2(l):
+    r =""
+    for i, n in enumerate(l):
+        
+        if n:
+            r +=  str(i) + ", "
+    print(r)
+# ShowList(ListNP(20000))
+ShowList2(Strat3(20000000))
