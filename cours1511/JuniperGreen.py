@@ -51,4 +51,3 @@ def IATourn(lastNb:int, nbsPlay:[])-> int:
         if nb in p:
             p.remove(nb)
     return p[random.randint(0,len(p) - 1)]
-
